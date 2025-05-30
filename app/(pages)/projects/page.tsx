@@ -17,7 +17,7 @@ export default function ProjectsPage() {
 
   const goToCaseStudy = useCallback(
     (slug: string) => {
-      router.push(`/${slug}`);
+      router.push(`/projects/${slug}`);
     },
     [router]
   );
@@ -38,8 +38,28 @@ export default function ProjectsPage() {
         className="flex flex-col items-center gap-10 py-16 px-4 md:px-8"
       >
         <ExperienceBlock
+          title="Boratas +"
+          slug="boratas-website"
+          position="Full-Stack Designer & Developer"
+          date="Jan 2025 – May 2025"
+          tags={[
+            "Next.js",
+            "PostgreSQL",
+            "TypeScript",
+            "Tailwind CSS",
+            "ShadCN UI",
+            "Prisma",
+            "Cloudflare",
+            "Custom CMS",
+            "Vercel",
+          ]}
+          videoSrc="/data/projects/boratas/cover-video.mp4"
+          onExplore={() => goToCaseStudy("boratas-website")}
+        />
+
+        <ExperienceBlock
           title="Boratas"
-          slug="boratas"
+          slug="boratas-multimedia"
           position="Multimedia Design"
           date="2020 – Present"
           tags={[
@@ -55,7 +75,7 @@ export default function ProjectsPage() {
             "social media",
           ]}
           videoSrc="/data/projects/boratas/cover-video.mp4"
-          onExplore={() => goToCaseStudy("boratas")}
+          onExplore={() => goToCaseStudy("boratas-multimedia")}
         />
 
         <ExperienceBlock
