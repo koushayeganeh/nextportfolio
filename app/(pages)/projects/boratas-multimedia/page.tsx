@@ -112,9 +112,9 @@ export default function BoratasMultiMedia() {
 
       {/* top-level layout */}
       <Container>
-        <div className="mx-auto px-4 flex flex-col lg:flex-row gap-12">
+        <div className="mx-auto px-4 flex flex-col lg:flex-row gap-16">
           {/* Desktop nav */}
-          <nav className="hidden lg:block w-48 shrink-0 sticky top-24 self-start">
+          <nav className="hidden lg:block w-56 shrink-0 sticky top-24 self-start">
             <ul className="space-y-4">
               {SECTIONS.map((s) => (
                 <li key={s.id}>

@@ -6,9 +6,6 @@ import Container from "@/components/ui/container";
 
 /* ——— stub blocks (replace with real content) ——— */
 import Hero from "./__components/Hero";
-import Goals from "./__components/Goals";
-import MyRole from "./__components/MyRole";
-import Constraints from "./__components/Constraints";
 
 import Competitive from "./__components/CompetitiveAudit";
 import AnalyticsAudit from "./__components/AnalyticsAudit";
@@ -27,6 +24,8 @@ import SEOWins from "./__components/SEOWins";
 
 import ImpactMetrics from "./__components/Impact";
 import Learnings from "./__components/Learnings";
+import ProjectContext from "./__components/ProjectContext";
+import DesignProcess from "./__components/03_DesignProcess";
 /* ———————————————————————————————— */
 
 type NavItem = {
@@ -133,7 +132,9 @@ export default function BoratasGlobalCaseStudy() {
   return (
     <article className="bg-background text-foreground">
       {/* ——— HERO ——— */}
-      <Hero />
+      <section id="overview" className="bg-foreground text-background mb-12">
+        <Hero />
+      </section>
 
       <Container>
         <div className="mx-auto px-4 flex flex-col lg:flex-row gap-16">
@@ -176,14 +177,16 @@ export default function BoratasGlobalCaseStudy() {
           </nav>
 
           {/* content */}
-          <div className="flex-1">
+          <div className="flex-1 space-y-8">
             {/* AT-A-GLANCE CARD */}
-            <section className="bg-[#1b1d1b] rounded-lg p-8 mb-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <section className="bg-[#1b1d1b] rounded-lg p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[
                 ["Role", "Full-Stack Designer-Developer"],
-                ["Timeline", "Nov ’24 → May ’25"],
-                ["Stack", "Next 15 • Neon • R2"],
-                ["Team", "Solo build + reviews"],
+                ["Timeline", "Feb ’25 → May ’25"],
+                [
+                  "Highlights",
+                  "Secure role-based admin panel • Hybrid SSR/ISR • Optimized Core Web Vitals • Dynamic multilingual content • Industry-specific UI & data schema",
+                ],
               ].map(([k, v]) => (
                 <div key={k}>
                   <h4 className="text-sm uppercase text-primary-alt mb-1">
@@ -194,39 +197,58 @@ export default function BoratasGlobalCaseStudy() {
               ))}
             </section>
 
-            {/* 1. CONTEXT */}
-            <Section id="context" title="1 · Project Context">
-              <div id="goals">
-                <Goals />
+            {/* ——— Tech Stack ——— */}
+            <section className="bg-[#1b1d1b] rounded-lg p-8">
+              <h3 className="text-xl font-semibold text-white mb-4">
+                Tech Stack
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "Figma",
+                  "Adobe Photoshop",
+                  "Adobe Illustrator",
+                  "Next.js 14",
+                  "React 18",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "ShadCN UI",
+                  "Prisma ORM",
+                  "PostgreSQL",
+                  "Cloudflare",
+                  "NextAuth.js",
+                  "Vercel",
+                ].map((tool) => (
+                  <span
+                    key={tool}
+                    className="bg-[#292c29] text-primary-alt px-3 py-1 rounded-full text-sm"
+                  >
+                    {tool}
+                  </span>
+                ))}
               </div>
-              <div id="role">
-                <MyRole />
-              </div>
-              <div id="constraints">
-                <Constraints />
+            </section>
+
+            {/* Project Context (single section with 3 sub-headings) */}
+            <Section id="context" title="Project Context">
+              <div className="scroll-mt-24 py-8">
+                <ProjectContext />
               </div>
             </Section>
 
             {/* 2. DISCOVERY */}
             <Section id="discovery" title="2 · Discovery & Research">
-              <div id="competitive">
+              <div id="competitive" className="mb-16 scroll-mt-24">
                 <Competitive />
               </div>
-              <div id="analytics">
+              <div id="analytics" className="mb-16 scroll-mt-24">
                 <AnalyticsAudit />
               </div>
             </Section>
 
             {/* 3. DESIGN */}
             <Section id="design" title="3 · Design Process">
-              <div id="ia">
-                <IAProcess />
-              </div>
-              <div id="visual">
-                <VisualLanguage />
-              </div>
-              <div id="locale">
-                <Localization />
+              <div id="design">
+                <DesignProcess />
               </div>
             </Section>
 

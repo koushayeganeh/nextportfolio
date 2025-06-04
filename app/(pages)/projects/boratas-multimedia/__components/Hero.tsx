@@ -3,7 +3,7 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 
-export default function ProjectContext() {
+export default function Hero() {
   return (
     <Container>
       <div className="mx-auto px-4 py-12 flex flex-col lg:flex-row items-center gap-12">
