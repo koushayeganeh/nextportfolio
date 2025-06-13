@@ -10,10 +10,6 @@ import Hero from "./__components/Hero";
 import Competitive from "./__components/CompetitiveAudit";
 import AnalyticsAudit from "./__components/AnalyticsAudit";
 
-import IAProcess from "./__components/IAProcess";
-import VisualLanguage from "./__components/VisualLanguage";
-import Localization from "./__components/Localization";
-
 import StackDiagram from "./__components/TechStack";
 import DataArch from "./__components/DataArchitecture";
 import AdminShowcase from "./__components/AdminPanel";
@@ -25,7 +21,7 @@ import SEOWins from "./__components/SEOWins";
 import ImpactMetrics from "./__components/Impact";
 import Learnings from "./__components/Learnings";
 import ProjectContext from "./__components/ProjectContext";
-import DesignProcess from "./__components/03_DesignProcess";
+import DesignProcess from "./__components/DesignProcess";
 /* ———————————————————————————————— */
 
 type NavItem = {
@@ -57,9 +53,11 @@ const NAV: NavItem[] = [
     id: "design",
     label: "3. Design",
     children: [
-      { id: "ia", label: "IA & Flows" },
-      { id: "visual", label: "Visual System" },
-      { id: "locale", label: "Localization" },
+      { id: "issues", label: "Identifying Key Issues" },
+      { id: "design-ia", label: "Information Architecture" },
+      { id: "design-user-interface", label: "User Interface" },
+      { id: "design-admin-dashboard", label: "Admin Dashboard" },
+      { id: "design-responsive", label: "Responsive Design" },
     ],
   },
   {
